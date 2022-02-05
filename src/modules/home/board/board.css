@@ -1,0 +1,16 @@
+/* .board{
+    height: 530px;
+    width: '100%';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(232, 255, 127);
+} */
+
+.board{
+    height: 530px;
+    width: '100%';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

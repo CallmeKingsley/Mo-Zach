@@ -1,0 +1,20 @@
+.board-row{
+  display: 'flex';
+  justify-content: center;
+  flex-direction: row;
+}
+
+.playBtn{
+  height: 43px;
+  width: 43px;
+  display: flex;
+  margin-left: 8px;
+  background-color: aquamarine;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.svgbtn{
+  height: 15px;
+}

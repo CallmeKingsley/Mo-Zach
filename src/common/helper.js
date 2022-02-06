@@ -18,13 +18,14 @@ export const Generate2DArray = () => {
 export const GenerateTask = () => {
   const task = []
   const date = new Date().getDate() // 5nd = 5
-  const day = new Date().getDay() // saturday = 6
+  const day = new Date().getDay() + 1 // saturday = 6
   const month = new Date().getMonth() // January = 1
   const year = new Date().getFullYear() // 2022
 
   const firsthalf = date * day * month
-  const fullNumber = firsthalf + '' + year
+  const fullNumber = firsthalf + '' + year + 843
   const predictionString = fullNumber.slice(0, 6)
+ 
   for (let i = 0; i < predictionString.length; i++) {
     const sound = FindtheSound(predictionString[i])
     task[i] = { value: sound, status: 'hide', color: 'green' }

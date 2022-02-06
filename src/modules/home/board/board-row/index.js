@@ -22,7 +22,7 @@ class BoardRow extends Component {
   playBtn =(row)=>{
     return (
       <div>
-        <button className='playBtn' onClick={() => this.playSounds(row)}>
+        <button className='playBtn' onClick={() => this.playSoundSlowly(row)}>
           <img src = {PlaybtnSVG}  className ='svgbtn'/>
         </button>
       </div>
@@ -77,7 +77,24 @@ class BoardRow extends Component {
       const sounds =  new Audio(location) 
       sounds.volume = 0.1
       sounds.play()
+      setTimeout((element)=>{
+        console.log('element',element);
+      }, 1000)
     });
+  }
+
+  sleep = (milliseconds) => {
+    return new Promise(resolve => setTimeout(resolve, milliseconds))
+  }
+
+  playSoundSlowly = async (sounds) => {
+    for (const item of sounds) {
+      const location  = this.findSounds(item.value)
+      const sounds =  new Audio(location) 
+      sounds.volume = 0.1
+      sounds.play()
+      await this.sleep(680)   
+    }
   }
 
   render () {

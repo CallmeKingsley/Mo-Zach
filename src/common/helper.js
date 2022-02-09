@@ -51,7 +51,7 @@ const FindtheSound = (digit) => {
       sound = 'Bb'
       break
     case 4:
-      sound = 'Cs'
+      sound = 'C'
       break
     case 5:
       sound = 'D'
